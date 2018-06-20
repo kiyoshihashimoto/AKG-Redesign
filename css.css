@@ -5,8 +5,9 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
+	
 	/* watch these later */
-	font-size: 3rem;
+	/*font-size: 3rem;*/
 }
 
 body {
@@ -105,11 +106,13 @@ CSS Grid layout for wider screens, when browser supports grid:
     .grid .h-subitems {
         height: 100vh;
         display: grid;
-        grid-template-columns: repeat(4) ;
-        grid-template-rows: 5rem minmax(auto, 20rem) 1fr;
+		grid-template-columns: repeat(4) ;
+		/* since both are going in the first row, 2nd row doesnt matter as much */
+        grid-template-rows: minmax(5rem, auto) minmax(auto, 20rem) 1fr;
     }
 
 	.top-badge {
+		height: 5rem;
 		grid-row: 1;
 		grid-column: 1;
 	}
@@ -123,28 +126,36 @@ header {
 	text-align: center;
 }
 
-/* doesn't span the whole width/height*/
 .top-badge {
 	background: #a2c9db;
 	opacity: 0.5;
-}
-
-.font-small {
-	font-size: 0.5rem;
 }
 
 .top-background {
     z-index: -1;
 }
 
+
+/* Typography - leave this alone until later */
+
+/*
+.font-small {
+	font-size: 0.5rem;
+}
+*/
+
+/*
 .slogan {
 	padding-right: 5rem;
 	padding-left: 5rem;
 }
+*/
 
+/*
 h2, p {
 	text-align: left;
 	padding-right: 5rem;
 	padding-left: 5rem;
 	font-size: 1.5rem;
 }
+*/
